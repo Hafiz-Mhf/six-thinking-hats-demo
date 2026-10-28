@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrainColor } from '../../types/brain';
 import { BRAIN_ARCHETYPES, DIAGNOSTIC_SCENARIOS } from '../../data/brainData';
 import { BrainAvatar } from '../visual/BrainAvatar';
@@ -28,6 +28,12 @@ export const BrainFinderModule = ({ onComplete }: { onComplete?: (color: BrainCo
     });
     return dominant;
   })();
+
+  useEffect(() => {
+    if (isComplete && onComplete) {
+      onComplete(computedDominant);
+    }
+  }, [isComplete, computedDominant, onComplete]);
 
   const activeColor = inspectedColor || computedDominant;
   const activeArchetype = BRAIN_ARCHETYPES[activeColor];

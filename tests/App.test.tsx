@@ -2,16 +2,24 @@ import { describe, it, expect } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import App from '../src/App';
 
-describe('App Integration', () => {
-  it('allows navigating between Playbook Hub and Live Workspace', () => {
+describe('Dual-Framework Visual App', () => {
+  it('renders top visual stage buttons and allows navigating between the 3 stages', () => {
     render(<App />);
 
-    expect(screen.getByText('Six Thinking Hats Playbook')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /1\. Find Your Brain/i })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /2\. Where & When to Apply/i })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /3\. Six Hats Simulator/i })).toBeInTheDocument();
 
-    // Click Workspace Tab in Top Nav
-    const workspaceTab = screen.getByRole('button', { name: /live workspace/i });
-    fireEvent.click(workspaceTab);
+    // Click Where & When stage
+    const whereBtn = screen.getByRole('button', { name: /2\. Where & When to Apply/i });
+    fireEvent.click(whereBtn);
 
-    expect(screen.getByText(/step 1 of 4: setup/i)).toBeInTheDocument();
+    expect(screen.getByText(/Hardware vs. Software/i)).toBeInTheDocument();
+
+    // Click Simulator stage
+    const simBtn = screen.getByRole('button', { name: /six hats simulator/i });
+    fireEvent.click(simBtn);
+
+    expect(screen.getByText(/4-Brain Parallel Meeting Simulator/i)).toBeInTheDocument();
   });
 });
