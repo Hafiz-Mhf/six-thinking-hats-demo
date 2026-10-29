@@ -2,43 +2,43 @@ import { WorkplaceScenario } from '../types/brain';
 
 export const WORKPLACE_SCENARIOS: WorkplaceScenario[] = [
   {
-    id: 'code-review',
-    title: 'Code Review & PR Disagreements',
-    tagline: 'When two senior developers debate an architectural approach on GitHub',
+    id: 'conflict-resolution',
+    title: 'Resolving Team Disagreements',
+    tagline: 'When two team members strongly disagree on how to solve an issue',
     iconName: 'GitPullRequest',
-    clashDescription: 'Green suggests an unorthodox pattern; Red demands standard step-by-step conventions; Purple demands historical benchmarks; Blue feels targeted by curt review comments.',
-    oneOnOneTip: 'If giving feedback to Red, use 1-2-3 action points. If giving feedback to Green, praise the innovation before evaluating. If reviewing Purple, provide benchmark references.',
-    hatSequence: ['White (Facts/Metrics)', 'Yellow (Upside of Pattern)', 'Black (Failure Modes/Risks)', 'Blue (Final Merge Agreement)'],
-    whyHatsWork: 'Separates finding the advantages (Yellow) from testing risks (Black), so neither author feels personally attacked.'
+    clashDescription: 'Green wants to try an unusual idea; Red wants to follow standard steps; Purple wants more proof and research; Blue feels the conversation is too aggressive.',
+    oneOnOneTip: 'When talking to Red, give 1-2-3 action points. When talking to Green, praise their creativity first. For Purple, give data. For Blue, check in warmly.',
+    hatSequence: ['White (Facts & Info)', 'Yellow (What is Good About It)', 'Black (Risks & Concerns)', 'Blue (Agreed Decision)'],
+    whyHatsWork: 'Everyone looks at the positives first (Yellow), then risks (Black), so no one feels personally attacked.'
   },
   {
-    id: 'incident-retro',
-    title: 'Production Incident Post-Mortem',
-    tagline: 'Reviewing a multi-hour outage without pointing fingers',
+    id: 'crisis-retro',
+    title: 'Handling a Team Crisis Without Blame',
+    tagline: 'Reviewing an urgent mistake or crisis without pointing fingers',
     iconName: 'AlertOctagon',
-    clashDescription: 'Purple wants to stay in log-diving forever; Red wants immediate rules; Blue worries about blaming engineers; Green gets distracted proposing futuristic rewrites.',
-    oneOnOneTip: 'Validate Blue’s emotional safety first so engineers speak honestly without fear of reprimand.',
-    hatSequence: ['Blue (Agenda)', 'White (Timeline & Facts)', 'Red (Raw 60s Gut Reactions)', 'Black (Root Flaws & Gaps)', 'Green (Countermeasures)', 'Blue (Action Items)'],
-    whyHatsWork: 'Gives White Hat full data time, Red Hat emotional release, and finishes in Red Brain’s dream: a concrete 1-2-3 prevention plan.'
+    clashDescription: 'Purple wants to investigate forever; Red wants quick rules and to move on; Blue worries people feel hurt or blamed; Green gets distracted proposing total overhauls.',
+    oneOnOneTip: 'Make the room emotionally safe first so people speak honestly without fear of being blamed.',
+    hatSequence: ['Blue (Meeting Goal)', 'White (What Happened / Facts)', 'Red (60s Honest Feelings)', 'Black (Real Gaps & Flaws)', 'Green (Solutions & Fixes)', 'Blue (Action Checklist)'],
+    whyHatsWork: 'Gives time for facts (White), lets people express feelings safely (Red), and ends with clear action steps (Blue).'
   },
   {
-    id: 'sprint-planning',
-    title: 'New Feature Brainstorm & Planning',
-    tagline: 'Kicking off a quarterly roadmap initiative with product and design',
+    id: 'new-initiatives',
+    title: 'Brainstorming New Initiatives',
+    tagline: 'Kicking off new team projects, employee programs, or workplace improvements',
     iconName: 'Sparkles',
-    clashDescription: 'Green wants to build revolutionary features; Red demands scope cuts to hit dates; Purple questions market validation; Blue worries about developer burnout.',
-    oneOnOneTip: 'Frame conversations with Green around possibilities, but translate their outputs into sequential phases for Red.',
-    hatSequence: ['Blue (Goal)', 'White (Customer Data)', 'Green (Wild Ideas)', 'Yellow (Feasibility)', 'Black (Technical Debt)', 'Blue (Sprint Scope)'],
-    whyHatsWork: 'Stops Red and Black from shooting down Green’s ideas before they are even developed.'
+    clashDescription: 'Green throws out wild ideas; Red shoots them down as unrealistic; Purple questions whether we have proof; Blue worries the team will burn out.',
+    oneOnOneTip: 'Let Green explore possibilities first, then help turn the best idea into realistic steps for Red.',
+    hatSequence: ['Blue (Purpose & Goal)', 'White (Current Situation & Data)', 'Green (Creative Ideas)', 'Yellow (Best Opportunities)', 'Black (Budget & Time Risks)', 'Blue (Next Steps)'],
+    whyHatsWork: 'Stops people from shooting down good ideas before they are even fully shared.'
   },
   {
     id: 'one-on-one',
-    title: '1-on-1 Delegation & Career Feedback',
-    tagline: 'Aligning a manager and team member on performance and goals',
+    title: '1-on-1 Feedback & Goal Setting',
+    tagline: 'A manager and team member discussing performance, expectations, and growth',
     iconName: 'UserCheck',
-    clashDescription: 'A Red manager dumping quick tasks on a Purple engineer causes anxiety; a Purple manager inundating a Green engineer with docs causes stagnation.',
-    oneOnOneTip: 'Always speak the receiver’s brain language. Package your intent in their processor format.',
-    hatSequence: ['Blue (Meeting Purpose)', 'Red (Mutual Gut Check)', 'Yellow (Strengths & Wins)', 'White (Objective Milestones)', 'Blue (Next Steps)'],
-    whyHatsWork: 'Builds psychological trust before establishing accountability metrics.'
+    clashDescription: 'A fast-moving Red manager dumping quick tasks on a Purple employee causes stress; a Purple manager handing piles of reading to a Green employee causes boredom.',
+    oneOnOneTip: 'Always speak in the other person’s natural style so they feel comfortable and understood.',
+    hatSequence: ['Blue (Conversation Purpose)', 'Red (How Both Feel Right Now)', 'Yellow (Wins & Strengths)', 'White (Clear Goals & Facts)', 'Blue (Agreed Action Items)'],
+    whyHatsWork: 'Builds trust and open feelings first before discussing goals and accountability.'
   }
 ];

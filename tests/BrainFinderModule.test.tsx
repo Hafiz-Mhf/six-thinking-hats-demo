@@ -7,16 +7,16 @@ describe('BrainFinderModule Component', () => {
     render(<BrainFinderModule onComplete={() => {}} />);
 
     expect(screen.getByText(/Find Your Brain Color in 60s/i)).toBeInTheDocument();
-    expect(screen.getByText(/Scenario 1: Production Bug Alert/i)).toBeInTheDocument();
+    expect(screen.getByText(/Scenario 1: Urgent Team Crisis/i)).toBeInTheDocument();
 
     // Select Red option for all 3 scenarios
-    const redOption1 = screen.getByText(/Run the emergency checklist/i).closest('button')!;
+    const redOption1 = screen.getByText(/Take immediate action/i).closest('button')!;
     fireEvent.click(redOption1);
 
-    const redOption2 = screen.getByText(/Scan straight for milestones & tasks/i).closest('button')!;
+    const redOption2 = screen.getByText(/Scan straight for action items/i).closest('button')!;
     fireEvent.click(redOption2);
 
-    const redOption3 = screen.getByText(/Unstructured, circular rambling/i).closest('button')!;
+    const redOption3 = screen.getByText(/Meetings with no action plan/i).closest('button')!;
     fireEvent.click(redOption3);
 
     expect(screen.getByText(/The Operator/i)).toBeInTheDocument();

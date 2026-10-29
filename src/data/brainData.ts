@@ -10,10 +10,10 @@ export const BRAIN_ARCHETYPES: Record<BrainColor, BrainArchetype> = {
     bgTint: '#f5f3ff',
     borderColor: '#c4b5fd',
     textColor: '#5b21b6',
-    summary: 'Relational & Data-Gathering. Absorbs deep context, reads background, and avoids premature guesses.',
-    superpower: 'Root Cause Hunter (Uncovers hidden dependencies & verified facts)',
-    kryptonite: 'Being pressured to commit before seeing the data or history',
-    communicationTip: 'Give them the documentation, background data, and time to digest first.'
+    summary: 'Likes details and facts. Reads background info before making decisions.',
+    superpower: 'Detail & Context Finder (Uncovers background facts and root causes)',
+    kryptonite: 'Being rushed to decide without info or background',
+    communicationTip: 'Share the background info and give them time to read first.'
   },
   red: {
     id: 'red',
@@ -24,10 +24,10 @@ export const BRAIN_ARCHETYPES: Record<BrainColor, BrainArchetype> = {
     bgTint: '#fef2f2',
     borderColor: '#fca5a5',
     textColor: '#991b1b',
-    summary: 'Linear & Sequential. Needs logical steps (1-2-3), direct structure, and clear action items.',
-    superpower: 'Tactical Execution (Organizes chaos into crisp, executable roadmaps)',
-    kryptonite: 'Aimless meetings, rambling discussions with no next steps or owner',
-    communicationTip: 'Get straight to the point. Use numbered lists, deadlines, and clear steps.'
+    summary: 'Likes clear steps and action. Wants 1-2-3 plans, clear owners, and quick progress.',
+    superpower: 'Action Driver (Turns confusion into clear next steps)',
+    kryptonite: 'Long rambling meetings with no clear action items',
+    communicationTip: 'Get straight to the point. Use bullet points and clear deadlines.'
   },
   green: {
     id: 'green',
@@ -38,10 +38,10 @@ export const BRAIN_ARCHETYPES: Record<BrainColor, BrainArchetype> = {
     bgTint: '#f0fdf4',
     borderColor: '#86efac',
     textColor: '#166534',
-    summary: 'Chaotic & Big Picture. Thinks in spontaneous creative bursts and makes lateral connections.',
-    superpower: 'Breakthrough Visionary (Disrupts bottlenecks with out-of-the-box ideas)',
-    kryptonite: 'Rigid micromanagement and being forced to follow rigid repetitive steps',
-    communicationTip: 'Give them space to brainstorm without immediate critical judgment.'
+    summary: 'Likes big picture ideas. Thinks creatively and makes unexpected connections.',
+    superpower: 'Creative Problem Solver (Brings fresh, out-of-the-box ideas)',
+    kryptonite: 'Strict micromanagement and rigid red tape',
+    communicationTip: 'Give them space to share ideas before judging them.'
   },
   blue: {
     id: 'blue',
@@ -52,95 +52,95 @@ export const BRAIN_ARCHETYPES: Record<BrainColor, BrainArchetype> = {
     bgTint: '#eff6ff',
     borderColor: '#93c5fd',
     textColor: '#1e40af',
-    summary: 'Intuitive & Emotional. Experiences information through empathy, interpersonal vibes, and gut feel.',
-    superpower: 'Team Radar & Purpose Anchor (Reads morale and aligns on the human impact)',
-    kryptonite: 'Cold, adversarial arguments with zero psychological safety',
-    communicationTip: 'Acknowledge feelings and team impact before diving purely into technicalities.'
+    summary: 'Likes empathy and team harmony. Focuses on people, morale, and how others feel.',
+    superpower: 'People & Morale Anchor (Brings empathy and keeps the team united)',
+    kryptonite: 'Cold arguments with no psychological safety',
+    communicationTip: 'Acknowledge feelings and team morale before diving into tasks.'
   }
 };
 
 export const DIAGNOSTIC_SCENARIOS: DiagnosticScenario[] = [
   {
     id: 'prod-incident',
-    title: 'Scenario 1: Production Bug Alert!',
-    subtitle: 'A critical service throws 500 errors in production. What is your immediate instinct?',
+    title: 'Scenario 1: Urgent Team Crisis!',
+    subtitle: 'An unexpected problem hits your project right before a deadline. What is your first instinct?',
     iconName: 'AlertTriangle',
     options: [
       {
         color: 'purple',
-        label: 'Trace the logs & history',
-        subtext: 'Inspect telemetry, git blame, and find verified root cause before touching code.'
+        label: 'Gather facts and history',
+        subtext: 'Check what happened and find the root cause before acting.'
       },
       {
         color: 'red',
-        label: 'Run the emergency checklist',
-        subtext: 'Step 1: Rollback. Step 2: Notify stakeholders. Step 3: Hotfix branch.'
+        label: 'Take immediate action',
+        subtext: 'Follow step 1, 2, 3 to fix the issue and assign tasks right away.'
       },
       {
         color: 'green',
-        label: 'Spontaneously experiment',
-        subtext: 'Try 3 creative bypass ideas right now to see if we can circumvent the bottleneck.'
+        label: 'Try a fresh workaround',
+        subtext: 'Come up with 2 or 3 quick ideas to bypass the roadblock.'
       },
       {
         color: 'blue',
-        label: 'Check the team pulse',
-        subtext: 'Ensure engineers are calm, roles are supported, and panic is kept at bay.'
+        label: 'Check on the team',
+        subtext: 'Make sure people are calm, supported, and not burning out.'
       }
     ]
   },
   {
     id: 'spec-review',
-    title: 'Scenario 2: Receiving a 20-Page Technical Spec',
-    subtitle: 'Product hands over a major architectural proposal for Q1. How do you approach it?',
+    title: 'Scenario 2: Getting a 20-Page Proposal',
+    subtitle: 'Management shares a long strategic plan. How do you approach it?',
     iconName: 'FileText',
     options: [
       {
         color: 'purple',
-        label: 'Read every footnote & diagram',
-        subtext: 'Thoroughly review data contracts, references, and benchmark evidence.'
+        label: 'Read every detail carefully',
+        subtext: 'Review the background, data, and supporting evidence.'
       },
       {
         color: 'red',
-        label: 'Scan straight for milestones & tasks',
-        subtext: 'What are the deliverables, who owns what, and what is the exact timeline?'
+        label: 'Scan straight for action items',
+        subtext: 'What needs to be done, who owns it, and what is the deadline?'
       },
       {
         color: 'green',
-        label: 'Skim the core, invent new alternatives',
-        subtext: 'Get the gist, then brainstorm 2 novel architectures that could do it better.'
+        label: 'Skim and think of new ideas',
+        subtext: 'Get the main gist, then think of better creative options.'
       },
       {
         color: 'blue',
-        label: 'Ask about the customer experience',
-        subtext: 'Does this actually delight users? How will this impact team morale to build?'
+        label: 'Think about team impact',
+        subtext: 'How will this affect our people, morale, and day-to-day culture?'
       }
     ]
   },
   {
     id: 'battery-drain',
-    title: 'Scenario 3: What Drains Your Mental Battery Most?',
-    subtitle: 'Which workplace situation causes you the most frustration and fatigue?',
+    title: 'Scenario 3: What Drains Your Energy Most?',
+    subtitle: 'Which workplace situation tires you out and frustrates you the most?',
     iconName: 'BatteryWarning',
     options: [
       {
         color: 'purple',
-        label: 'Being forced to decide without data',
-        subtext: 'Pressure to commit while blind to background context and historical facts.'
+        label: 'Deciding without facts',
+        subtext: 'Being pushed to choose without knowing the background or context.'
       },
       {
         color: 'red',
-        label: 'Unstructured, circular rambling',
-        subtext: 'Hour-long meetings where people talk in circles without establishing next steps.'
+        label: 'Meetings with no action plan',
+        subtext: 'Talking in circles for an hour without deciding next steps.'
       },
       {
         color: 'green',
-        label: 'Rigid micromanagement & bureaucracy',
-        subtext: 'Being constrained by strict step-by-step red tape with zero creative leeway.'
+        label: 'Micromanagement & red tape',
+        subtext: 'Having every move restricted with zero creative freedom.'
       },
       {
         color: 'blue',
-        label: 'Cold, adversarial arguments',
-        subtext: 'Ego-driven debates where people are defensive and nobody listens with empathy.'
+        label: 'Cold, harsh arguments',
+        subtext: 'Ego debates where people get defensive and ignore feelings.'
       }
     ]
   }

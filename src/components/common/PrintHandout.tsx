@@ -10,12 +10,12 @@ export const PrintHandout = () => {
       <div className="border-b pb-4">
         <h1 className="text-3xl font-black">Colored Brain & Six Thinking Hats — Team Cheat Sheet</h1>
         <p className="text-sm text-slate-600 mt-1">
-          Hardware (Who You Are) + Software (What You Wear Together) for Daily Engineering Flow
+          Natural Style (Who You Are) + Meeting Hat (How We Think Together) for Everyday Teamwork
         </p>
       </div>
 
       <div>
-        <h2 className="text-lg font-black mb-3">1. The 4 Brain Processors (Hardware)</h2>
+        <h2 className="text-lg font-black mb-3">1. The 4 Natural Communication Styles</h2>
         <div className="grid grid-cols-4 gap-3">
           {brainColors.map((c) => {
             const arch = BRAIN_ARCHETYPES[c];

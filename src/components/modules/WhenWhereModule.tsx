@@ -34,7 +34,7 @@ export const WhenWhereModule = () => {
           When & Where to Apply at Work
         </h2>
         <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto">
-          How to translate 1-on-1 conversations using Colored Brain, and orchestrate group meetings using Six Thinking Hats:
+          How to communicate 1-on-1 using Colored Brain, and guide team discussions using Six Thinking Hats:
         </p>
       </div>
 

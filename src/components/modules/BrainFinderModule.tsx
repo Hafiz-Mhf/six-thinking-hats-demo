@@ -49,7 +49,7 @@ export const BrainFinderModule = ({ onComplete }: { onComplete?: (color: BrainCo
           Find Your Brain Color in 60s
         </h2>
         <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto">
-          Your brain color is your natural hardware wiring. Tap the option that matches your immediate instinct in each situation below:
+          Your brain color is your natural communication style. Tap the option that matches your immediate instinct in each situation below:
         </p>
       </div>
 

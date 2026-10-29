@@ -10,15 +10,15 @@
 
 ## 1. Project Overview & Objectives
 
-* **Core Purpose:** A visual-first, low-text interactive web experience combining **Arthur Carmazzi's Colored Brain** (Hardware / Who You Are) and **Dr. Edward de Bono's Six Thinking Hats** (Software / What You Wear Together) to train engineering teams on where, why, and how to apply both tools in everyday work.
-* **Core Mental Model:**
-  * **Hardware (Colored Brain):** Your genetic, default way of taking in information (Purple 🟣, Red 🔴, Green 🟢, Blue 🔵). Stable and unconscious. Explains why team members naturally clash 1-on-1.
-  * **Software (Six Thinking Hats):** Deliberate, temporary mental operating modes (White ⚪, Red 🔴, Yellow 🟡, Black ⚫, Green 🟢, Blue 🔵). Fluid and conscious. Aligns all 4 brain processors to look in the exact same direction at the same time.
+* **Core Purpose:** A visual-first, low-text interactive web guide combining **Arthur Carmazzi's Colored Brain** and **Dr. Edward de Bono's Six Thinking Hats** to help HR and teams communicate better, reduce friction, and run productive meetings.
+* **Core HR Mental Model — Natural Style vs. Meeting Hat:**
+  * **Natural Style (Colored Brain — Who You Are):** How your brain naturally takes in information (Purple 🟣 Facts & Details, Red 🔴 Action & Steps, Green 🟢 Fresh Ideas, Blue 🔵 People & Feelings). Everyone is different. It is who you are, and that is okay. Explains why two people can clash in a 1-on-1 talk if their styles differ.
+  * **Meeting Hat (Six Thinking Hats — How We Think Together):** A simple tool for team meetings (White ⚪ Facts, Red 🔴 Gut Feelings, Yellow 🟡 Positives, Black ⚫ Risks, Green 🟢 Ideas, Blue 🔵 Next Steps). Instead of arguing back and forth, the whole team wears the same hat at the same time so no one feels personally attacked.
 * **Key Objectives:**
-  1. **Self-Awareness in 60s:** Instant visual diagnostic revealing innate processor type, superpowers, kryptonite, and peer communication tips.
-  2. **Everyday Workplace Mapping:** Concrete mapping of 4 engineering situations (PR Review, Incident Post-Mortem, Feature Brainstorm, 1-on-1 Delegation) to 1-on-1 communication vs. group 6-hat sequences.
-  3. **4-Brain Parallel Meeting Simulator:** Visual simulation of 4 archetypes (Alex, Ryan, Chloe, Maya) harmonizing under the same hat with timer chimes and thought capture.
-  4. **Zero Overhead:** 100% offline-capable, runs on modern browsers, projector-ready, zero external audio or database dependencies.
+  1. **Self-Awareness in 60s:** Quick 3-scenario quiz showing your natural communication style, strengths, stress triggers, and tips on how to talk to teammates.
+  2. **Everyday Workplace Guide:** Practical guide for 4 common workplace situations (resolving team disagreements, handling project crises without blame, brainstorming new initiatives, 1-on-1 feedback). Shows how to talk 1-on-1 vs. which hats to use in a group.
+  3. **4-Style Meeting Simulator:** Interactive demo showing how all 4 styles (Alex, Ryan, Chloe, Maya) work together smoothly under the same hat.
+  4. **Simple & Zero Overhead:** Works offline in any browser, projector-friendly, zero login or complex setup.
 
 ---
 
@@ -152,7 +152,8 @@ npm run build
 
 * **2026-10-29:** Implemented visual-first dual-framework experience combining Arthur Carmazzi's Colored Brain and Dr. Edward de Bono's Six Thinking Hats:
   * Implemented 60-second visual self-diagnostic module (`BrainFinderModule`, `BrainAvatar`) with archetype superpower, kryptonite, and peer communication badges.
-  * Implemented "When & Where to Apply" interactive matrix (`WhenWhereModule`, `HardwareSoftwareGraphic`) with 4 daily software scenarios (PR review disputes, incident post-mortem, roadmap feature brainstorm, 1-on-1 career delegation).
+  * Implemented "When & Where to Apply" interactive matrix (`WhenWhereModule`, `HardwareSoftwareGraphic`) with 4 common workplace scenarios (resolving team disagreements, handling project crises without blame, brainstorming new initiatives, 1-on-1 feedback).
+  * Refactored analogy from tech terms ("Hardware vs Software") to an HR-friendly model: "Natural Style (Who You Are) vs. Meeting Hat (How We Think Together)" with simple, concise everyday language.
   * Implemented 4-avatar parallel meeting simulator (`HatSimulatorModule`) with synced avatar behaviors, Web Audio oscillator timer chimes, hotkeys, and live note capture.
   * Added printable A4 landscape team summary cheat sheet (`PrintHandout`).
   * 13 test files passing (22/22 unit and integration tests), clean production build.

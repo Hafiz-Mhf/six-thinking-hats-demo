@@ -27,13 +27,13 @@ export const SIM_HATS: Record<SimHat, HatSpec> = {
     color: '#475569',
     bgTint: '#f8fafc',
     borderColor: '#cbd5e1',
-    question: 'What are the hard numbers, error logs, and verifiable metrics?',
-    rule: 'Only verified facts. No opinions or interpretations allowed.',
+    question: 'What are the objective facts, survey results, and verifiable numbers?',
+    rule: 'Only verified facts and data. No opinions or assumptions allowed.',
     avatarBehaviors: {
-      purple: 'Alex feels right at home, sharing log benchmarks and historical telemetry.',
-      red: 'Ryan focuses strictly on concrete dates, sprint velocity, and ticket stats.',
-      green: 'Chloe grounds her imagination in hard data gaps that need solving.',
-      blue: 'Maya shares measurable user engagement and customer survey metrics.'
+      purple: 'Alex shares past records, background data, and factual context.',
+      red: 'Ryan focuses strictly on key dates, milestones, and headcount numbers.',
+      green: 'Chloe checks factual gaps to see where fresh ideas are needed.',
+      blue: 'Maya shares employee feedback and survey comments.'
     }
   },
   red: {
@@ -43,13 +43,13 @@ export const SIM_HATS: Record<SimHat, HatSpec> = {
     color: '#dc2626',
     bgTint: '#fef2f2',
     borderColor: '#fca5a5',
-    question: 'What is your raw instinct or gut feeling right now? (60 seconds)',
-    rule: 'No logic, reasoning, or justification needed. Voice your intuition.',
+    question: 'What is your quick gut feeling or reaction right now? (60 seconds)',
+    rule: 'No need to justify or explain why. Just voice your true feeling.',
     avatarBehaviors: {
-      purple: 'Alex expresses his hunch without needing to dig through 50 docs first.',
-      red: 'Ryan shares his gut feeling on whether this milestone will slip.',
-      green: 'Chloe vents her excitement or anxiety without judgment.',
-      blue: 'Maya feels totally safe sharing team morale intuition without pushback.'
+      purple: 'Alex shares his gut feeling without needing to read 10 reports first.',
+      red: 'Ryan says openly if he feels a target or deadline will slip.',
+      green: 'Chloe shares her excitement or worry without feeling judged.',
+      blue: 'Maya feels totally safe sharing team morale intuition.'
     }
   },
   yellow: {
@@ -59,12 +59,12 @@ export const SIM_HATS: Record<SimHat, HatSpec> = {
     color: '#d97706',
     bgTint: '#fffbeb',
     borderColor: '#fde68a',
-    question: 'What are the upside benefits? What is the best-case scenario?',
-    rule: 'Constructive optimism. Why could this succeed and create value?',
+    question: 'What are the positive benefits and best-case opportunities?',
+    rule: 'Focus on what could work and why this creates value for the team.',
     avatarBehaviors: {
-      purple: 'Alex calculates long-term technical maintainability gains.',
-      red: 'Ryan identifies how this streamlines the deployment cycle time.',
-      green: 'Chloe highlights exciting new market opportunities unlocked.',
+      purple: 'Alex points out how this will make our workflow cleaner over time.',
+      red: 'Ryan identifies how this saves time and speeds up delivery.',
+      green: 'Chloe highlights exciting new opportunities unlocked for the team.',
       blue: 'Maya highlights how happy and less stressed the team will be.'
     }
   },
@@ -75,13 +75,13 @@ export const SIM_HATS: Record<SimHat, HatSpec> = {
     color: '#1e293b',
     bgTint: '#f1f5f9',
     borderColor: '#94a3b8',
-    question: 'What fatal flaws, security gaps, or costs could break this?',
-    rule: 'Objective risk assessment. Challenge the idea, not the person.',
+    question: 'What risks, hidden costs, or obstacles could hold us back?',
+    rule: 'Objective risk assessment. Challenge the idea, never the person.',
     avatarBehaviors: {
-      purple: 'Alex points out database scaling bottlenecks under peak load.',
-      red: 'Ryan highlights dependency bottlenecks in the release pipeline.',
-      green: 'Chloe stress-tests unorthodox failure modes in edge cases.',
-      blue: 'Maya spots human risks: developer on-call burnout and friction.'
+      purple: 'Alex points out missing details that could cause confusion later.',
+      red: 'Ryan highlights bottlenecks in the schedule and resources.',
+      green: 'Chloe stress-tests what might go wrong in rare edge cases.',
+      blue: 'Maya points out human risks: team burnout, workload, and morale.'
     }
   },
   green: {
@@ -91,13 +91,13 @@ export const SIM_HATS: Record<SimHat, HatSpec> = {
     color: '#16a34a',
     bgTint: '#f0fdf4',
     borderColor: '#86efac',
-    question: 'What wild alternatives, provocations, or fresh moves can we invent?',
+    question: 'What fresh ideas, creative alternatives, or new moves can we try?',
     rule: 'Zero criticism allowed. All wild ideas welcome. "Yes, and..."',
     avatarBehaviors: {
-      purple: 'Alex proposes using an emerging vector database pattern.',
-      red: 'Ryan invents an automated script to bypass manual releases.',
-      green: 'Chloe thrives, sparking 5 radical ideas in 60 seconds.',
-      blue: 'Maya proposes a collaborative peer-pairing format for PR reviews.'
+      purple: 'Alex suggests proven ideas learned from other top teams.',
+      red: 'Ryan invents a simple checklist to eliminate wasted steps.',
+      green: 'Chloe thrives, sparking 5 creative ideas in 60 seconds.',
+      blue: 'Maya proposes a peer-buddy system and team appreciation activity.'
     }
   },
   blue: {
@@ -107,13 +107,13 @@ export const SIM_HATS: Record<SimHat, HatSpec> = {
     color: '#2563eb',
     bgTint: '#eff6ff',
     borderColor: '#93c5fd',
-    question: 'What is our decision, and what is the concrete 1-2-3 action plan?',
-    rule: 'Synthesize decisions into assigned tasks, owners, and deadlines.',
+    question: 'What is our decision, and what is our 1-2-3 action plan with owners?',
+    rule: 'Turn discussion into clear next steps, assigned owners, and deadlines.',
     avatarBehaviors: {
-      purple: 'Alex documents the architecture decision record (ADR).',
-      red: 'Ryan rejoices as decisions become a step-by-step checklist with owners.',
-      green: 'Chloe agrees on the scope boundaries to prototype next.',
-      blue: 'Maya confirms everyone feels aligned, heard, and energized.'
+      purple: 'Alex writes down the clear meeting summary and key takeaways.',
+      red: 'Ryan turns decisions into a numbered action checklist with owners.',
+      green: 'Chloe agrees on which experiment to try out first.',
+      blue: 'Maya makes sure everyone feels heard, included, and aligned.'
     }
   }
 };
@@ -123,8 +123,8 @@ export const HatSimulatorModule = () => {
   const [timerSeconds, setTimerSeconds] = useState(120);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
   const [cards, setCards] = useState<Array<{ id: string; hat: SimHat; text: string }>>([
-    { id: '1', hat: 'white', text: 'Error rate spiked to 14% at 09:30 UTC' },
-    { id: '2', hat: 'green', text: 'Auto-fallback to cached read replicas' }
+    { id: '1', hat: 'white', text: '78% of staff voted for flexible hybrid hours' },
+    { id: '2', hat: 'green', text: 'Start a monthly Friday peer-learning lunch' }
   ]);
   const [newNote, setNewNote] = useState('');
 
@@ -189,7 +189,7 @@ export const HatSimulatorModule = () => {
           4-Brain Parallel Meeting Simulator
         </h2>
         <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto">
-          Watch how wearing the SAME hat aligns all 4 Colored Brain processors into harmonious parallel thinking:
+          Watch how wearing the SAME hat helps all 4 communication styles think together without arguing:
         </p>
       </div>
 
@@ -277,7 +277,7 @@ export const HatSimulatorModule = () => {
       <div className="space-y-3">
         <div className="flex items-center justify-between">
           <h4 className="text-sm font-bold text-slate-700">How the 4 Brain Colors Behave Together Under {currentHat.name}:</h4>
-          <span className="text-xs text-slate-400">All 4 processors synchronized</span>
+          <span className="text-xs text-slate-400">All 4 styles thinking together</span>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

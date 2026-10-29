@@ -14,7 +14,7 @@ describe('Dual-Framework Visual App', () => {
     const whereBtn = screen.getByRole('button', { name: /2\. Where & When to Apply/i });
     fireEvent.click(whereBtn);
 
-    expect(screen.getByText(/Hardware vs. Software/i)).toBeInTheDocument();
+    expect(screen.getByText(/Natural Style vs\. Meeting Hat/i)).toBeInTheDocument();
 
     // Click Simulator stage
     const simBtn = screen.getByRole('button', { name: /six hats simulator/i });
