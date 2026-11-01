@@ -2,39 +2,38 @@
 
 > **Living Context Document:** This document reflects the latest architecture, implementation progress, test status, and upcoming roadmap for the Six Thinking Hats web application. It should be updated whenever significant updates, refactors, or new features are introduced.
 
-**Last Updated:** 2026-10-28  
-**Current Git Branch:** `main` (synced with `origin/main`)  
+**Last Updated:** 2026-10-29  
+**Current Git Branch:** `feat/colored-brain-six-hats-visual-app` (pushed to `origin`)  
 **Project Repository:** [https://github.com/Hafiz-Mhf/six-thinking-hats-demo](https://github.com/Hafiz-Mhf/six-thinking-hats-demo)
 
 ---
 
 ## 1. Project Overview & Objectives
 
-* **Core Purpose:** An interactive, dual-hub web application built to explain Dr. Edward de Bono's Six Thinking Hats methodology to internal teams, train them on parallel thinking in daily software engineering workflows, and provide a live facilitator tool for running time-boxed meetings.
+* **Core Purpose:** A visual-first, low-text interactive web guide combining **Arthur Carmazzi's Colored Brain** and **Dr. Edward de Bono's Six Thinking Hats** to help HR and teams communicate better, reduce friction, and run productive meetings.
+* **Core HR Mental Model — Natural Style vs. Meeting Hat:**
+  * **Natural Style (Colored Brain — Who You Are):** How your brain naturally takes in information (Purple 🟣 Facts & Details, Red 🔴 Action & Steps, Green 🟢 Fresh Ideas, Blue 🔵 People & Feelings). Everyone is different. It is who you are, and that is okay. Explains why two people can clash in a 1-on-1 talk if their styles differ.
+  * **Meeting Hat (Six Thinking Hats — How We Think Together):** A simple tool for team meetings (White ⚪ Facts, Red 🔴 Gut Feelings, Yellow 🟡 Positives, Black ⚫ Risks, Green 🟢 Ideas, Blue 🔵 Next Steps). Instead of arguing back and forth, the whole team wears the same hat at the same time so no one feels personally attacked.
 * **Key Objectives:**
-  1. **Behavioral Guardrailing:** Eliminate unproductive ping-pong debates by having the whole room wear the exact same hat at the same time.
-  2. **Practical Daily Work Usage:** Move beyond theoretical knowledge with pre-configured meeting recipes (standup blockers, retrospectives, brainstorms, risk reviews).
-  3. **Action-Oriented Closure:** Directly synthesize multi-angle thoughts into concrete, owned action items with deadlines.
-  4. **Zero Overhead:** 100% offline-capable, runs on any modern browser, projector-friendly, zero login or database dependencies.
+  1. **Self-Awareness in 60s:** Quick 3-scenario quiz showing your natural communication style, strengths, stress triggers, and tips on how to talk to teammates.
+  2. **Everyday Workplace Guide:** Practical guide for 4 common workplace situations (resolving team disagreements, handling project crises without blame, brainstorming new initiatives, 1-on-1 feedback). Shows how to talk 1-on-1 vs. which hats to use in a group.
+  3. **4-Style Meeting Simulator:** Interactive demo showing how all 4 styles (Alex, Ryan, Chloe, Maya) work together smoothly under the same hat.
+  4. **Simple & Zero Overhead:** Works offline in any browser, projector-friendly, zero login or complex setup.
 
 ---
 
 ## 2. Current Implementation Status
 
-All MVP tasks outlined in the implementation plan have been completed, verified, merged into `main`, and pushed to remote:
+All stages of the dual-framework visual experience have been implemented, tested, and verified:
 
 | Subsystem / Feature | Status | Verification |
 | :--- | :--- | :--- |
-| **Project Scaffolding** (React 19, Vite, Tailwind CSS v4, Lucide) | ✅ Complete | Build passes |
-| **Domain Data & Types** (Hat info, DOs/DON'Ts, 4 recipes, case studies) | ✅ Complete | Unit tests pass (`tests/data.test.ts`) |
-| **Web Audio Chimes & Timer Utility** (Synthetic oscillator, MM:SS) | ✅ Complete | Unit tests pass (`tests/timer.test.ts`) |
-| **State Machine & Persistence** (`WorkshopContext` + `localStorage`) | ✅ Complete | State tests pass (`tests/context.test.tsx`) |
-| **Playbook & Guide Hub** (6-hat explorer, parallel thinking visualizer) | ✅ Complete | Component tests pass (`tests/PlaybookHub.test.tsx`) |
-| **Facilitator Workspace** (Chromatic header, sticky wall, metadata tags) | ✅ Complete | Component tests pass (`tests/StickyWall.test.tsx`) |
-| **Facilitator HUD & Hotkeys** (`1-6`, `Space`, `T`, `N`, `M`) | ✅ Complete | Hotkey tests pass (`tests/hotkeys.test.ts`) |
-| **Synthesis Matrix & Action Item Table** (6-column grid, action register) | ✅ Complete | Component tests pass |
-| **Exporters** (One-click Markdown `.md` export + A4 Landscape Print/PDF) | ✅ Complete | Export tests pass (`tests/exportMarkdown.test.ts`) |
-| **Full App Integration & Production Build** | ✅ Complete | 16/16 tests pass, `npm run build` passes |
+| **Brain Archetypes & Workplace Scenarios Data** (`brainData.ts`, `workplaceScenarios.ts`) | ✅ Complete | Unit tests pass (`tests/brainData.test.ts`) |
+| **Module 1: Find Your Brain in 60s** (`BrainFinderModule.tsx`, `BrainAvatar.tsx`) | ✅ Complete | Component tests pass (`tests/BrainFinderModule.test.tsx`) |
+| **Module 2: When & Where to Apply** (`WhenWhereModule.tsx`, `HardwareSoftwareGraphic.tsx`) | ✅ Complete | Component tests pass (`tests/WhenWhereModule.test.tsx`) |
+| **Module 3: 4-Brain Parallel Simulator** (`HatSimulatorModule.tsx`, Web Audio synth) | ✅ Complete | Component tests pass (`tests/HatSimulatorModule.test.tsx`) |
+| **App Shell & Stage Navigation** (`App.tsx`, `VisualHeader.tsx`, `PrintHandout.tsx`) | ✅ Complete | Integration tests pass (`tests/App.test.tsx`) |
+| **Full Test Suite & Production Bundle** | ✅ Complete | 13/13 test files (22/22 tests) pass, `npm run build` zero TS errors |
 
 ---
 
@@ -151,5 +150,12 @@ npm run build
 
 ## 7. Change Log
 
+* **2026-10-29:** Implemented visual-first dual-framework experience combining Arthur Carmazzi's Colored Brain and Dr. Edward de Bono's Six Thinking Hats:
+  * Implemented 60-second visual self-diagnostic module (`BrainFinderModule`, `BrainAvatar`) with archetype superpower, kryptonite, and peer communication badges.
+  * Implemented "When & Where to Apply" interactive matrix (`WhenWhereModule`, `HardwareSoftwareGraphic`) with 4 common workplace scenarios (resolving team disagreements, handling project crises without blame, brainstorming new initiatives, 1-on-1 feedback).
+  * Refactored analogy from tech terms ("Hardware vs Software") to an HR-friendly model: "Natural Style (Who You Are) vs. Meeting Hat (How We Think Together)" with simple, concise everyday language.
+  * Implemented 4-avatar parallel meeting simulator (`HatSimulatorModule`) with synced avatar behaviors, Web Audio oscillator timer chimes, hotkeys, and live note capture.
+  * Added printable A4 landscape team summary cheat sheet (`PrintHandout`).
+  * 13 test files passing (22/22 unit and integration tests), clean production build.
 * **2026-10-28:** Created `CURRENT_CONTEXT.md` as the living project context document following completion and merge of all core MVP modules into `main`.
 * **2026-10-12:** Completed Tasks 1–9; implemented PlaybookHub, WorkspaceHub, FacilitatorHUD, Timer with Web Audio API, MatrixOverview, ActionItemTable, and Markdown exporter. Merged to `main` and pushed to GitHub.
