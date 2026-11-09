@@ -244,7 +244,11 @@ export function PresentationDeck() {
             <article className="hat-detail" style={{ '--accent': hat.color, '--soft': hat.soft, '--line': hat.line } as React.CSSProperties}>
               <div className="hat-question"><small>{hat.name}</small><h2>{hat.question}</h2><p>{hat.purpose}</p></div>
               <div className="hat-example"><small>Sounds like</small><p>“{hat.example}”</p></div>
-              <div className="hat-avoid"><small>Leave outside this hat</small><p>{hat.avoid}</p></div>
+              <div className="hat-avoid">
+                <small>{hat.guidance}</small>
+                <p>For example, say:<br />“{hat.say}”</p>
+                <p>Avoid saying:<br />“{hat.avoidSay}”</p>
+              </div>
             </article>
             <p className="guardrail-note"><strong>One team, one hat:</strong> everyone uses the same mode at the same time.</p>
           </section>

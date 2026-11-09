@@ -28,7 +28,9 @@ export interface HatProfile {
   purpose: string;
   question: string;
   example: string;
-  avoid: string;
+  guidance: string;
+  say: string;
+  avoidSay: string;
 }
 
 export const BRAINS: BrainProfile[] = [
@@ -105,7 +107,9 @@ export const HATS: HatProfile[] = [
     purpose: 'Look at facts and information gaps.',
     question: 'What do we know?',
     example: 'We have three months of customer feedback.',
-    avoid: 'Opinions presented as facts.'
+    guidance: 'Separate facts from opinions',
+    say: 'The data shows that complaints increased last month.',
+    avoidSay: 'I am sure customers hate this.'
   },
   {
     id: 'red',
@@ -117,7 +121,9 @@ export const HATS: HatProfile[] = [
     purpose: 'Share feelings, instinct, and immediate reactions.',
     question: 'How do we feel?',
     example: 'I feel excited, but the timing makes me uneasy.',
-    avoid: 'Demanding proof for someone’s feeling.'
+    guidance: 'Let people share feelings without needing proof',
+    say: 'I feel uneasy about the timing.',
+    avoidSay: 'Prove why you feel that way.'
   },
   {
     id: 'green',
@@ -129,7 +135,9 @@ export const HATS: HatProfile[] = [
     purpose: 'Create alternatives and new possibilities.',
     question: 'What else could we try?',
     example: 'Could we test a smaller version for two weeks?',
-    avoid: 'Judging ideas while they are being created.'
+    guidance: 'Create ideas before judging them',
+    say: 'What if we test a smaller version first?',
+    avoidSay: 'That idea will never work.'
   },
   {
     id: 'yellow',
@@ -141,7 +149,9 @@ export const HATS: HatProfile[] = [
     purpose: 'Find value, benefits, and reasons an idea could work.',
     question: 'What could go well?',
     example: 'This could shorten handovers and improve focus.',
-    avoid: 'Empty optimism without a reason.'
+    guidance: 'Explain why an idea could work',
+    say: 'This could save time because it removes one approval step.',
+    avoidSay: 'It will definitely be perfect.'
   },
   {
     id: 'black',
@@ -153,7 +163,9 @@ export const HATS: HatProfile[] = [
     purpose: 'Spot risks, limits, and possible problems.',
     question: 'What could go wrong?',
     example: 'New staff may struggle without clear documentation.',
-    avoid: 'Attacking the person instead of testing the idea.'
+    guidance: 'Focus on the idea, not the person',
+    say: 'This idea may be too expensive.',
+    avoidSay: 'You always come up with bad ideas.'
   },
   {
     id: 'blue',
@@ -165,7 +177,9 @@ export const HATS: HatProfile[] = [
     purpose: 'Guide the process and turn discussion into action.',
     question: 'What happens next?',
     example: 'We will run a two-week trial. Aina owns the review.',
-    avoid: 'Ending without a decision, owner, or follow-up.'
+    guidance: 'End with a clear action and owner',
+    say: 'Aina will run the trial and report back on Friday.',
+    avoidSay: 'Let us discuss this again sometime.'
   }
 ];
 
